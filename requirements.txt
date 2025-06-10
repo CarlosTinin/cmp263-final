@@ -1,0 +1,6 @@
+pandas
+liac-arff
+scikit-learn
+matplotlib
+numpy
+seaborn
