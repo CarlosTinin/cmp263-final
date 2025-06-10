@@ -1,7 +1,7 @@
 from visualization.explore import DataExplorer
 from preprocessing.preprocess import Preprocessor
 from training.models import knn_optimizing_k, svm_optimizing_c, gaussian_nayve_bayes, decision_tree_optimizing_max_depth, random_forest_optimizing_n_estimators
-from training.utils import split_into_train_valid_test, evaluating_models
+from training.utils import split_into_train_valid_test, evaluating_models_cm_and_recall, evaluating_models
 
 ################################################################
 #            1. Data visualization and exploration             #
@@ -83,7 +83,8 @@ models = {
     'RandomForest': rmf
 }
 
-evaluating_models(models, X_test, y_test)
+evaluating_models_cm_and_recall(models, X_test, y_test)
+#evaluating_models(models, X_test, y_test) # used for generating graphic that compares models
 
 ################################################################
 #                 7. Final training (To Do)                    #
